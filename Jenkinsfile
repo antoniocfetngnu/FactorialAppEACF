@@ -1,6 +1,9 @@
 pipeline {
     agent any
-
+    tools {
+        maven 'Maven 3.8.5'    // Nombre del Maven configurado en Jenkins
+        jdk 'Java 11'          // Nombre del JDK configurado
+    }
     stages {
         stage('Clonar') {
             steps {
@@ -32,4 +35,3 @@ pipeline {
         }
     }
 }
-v
